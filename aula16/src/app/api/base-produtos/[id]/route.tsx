@@ -14,5 +14,5 @@ export async function GET(
 ) {
   // Criar uma forma de pesquisa na lista para identificar o produto pelo ID
   const produto = produtos.find((p) => p.id == params.id);
-  return NextResponse.json({ produto });
+  return NextResponse.json(produto);
 }
