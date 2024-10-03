@@ -12,3 +12,12 @@ const produtos = [
 export async function GET() {
     return NextResponse.json(produtos);
 }
+
+export async function POST(request:Request) {
+
+
+    request
+
+
+    return NextResponse.json(produtos);
+}
