@@ -1,5 +1,12 @@
 import { NextResponse } from "next/server";
 
+type tipoProduto = {
+    id: number;
+    nome: string;
+    preco: number;
+    qtd: number;
+}
+
 //CRIAR AQUI NESTE LOCAL OU TRAZER PARA CÁ A LISTA DE
 //PRODUTOS E APRESENTAR ELA NO RETORNO DA API...
 
@@ -16,8 +23,17 @@ export async function GET() {
 export async function POST(request:Request) {
 
 
-    request
+    const produto:tipoProduto =  await request.json();
+
+    //Gerando um novo ID para o produto:
+
+    const novoId = produtos[produtos.length-1].id + 1;
+    produto.id = novoId
+
+    console.log("MEU PRODUTO :" + produto.nome);
+
+    produtos.push(produto);
 
 
-    return NextResponse.json(produtos);
+    return NextResponse.json(produto, {status:201});
 }
