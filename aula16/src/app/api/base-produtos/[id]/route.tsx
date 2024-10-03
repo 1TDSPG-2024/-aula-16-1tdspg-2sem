@@ -9,7 +9,11 @@ const produtos = [
     { id: 3, nome: "teclado", preco: 130, qtd: 40 },
 ];
 
-// Esse é o GetAll
-export async function GET() {
-    return NextResponse.json(produtos);
+// Esse é o GetById
+export async function GET(response:Response, {params}:{params:{id:number}}) {
+    
+    // Criar uma forma de pesquisa na lista para identificar o produtos pelo ID
+    const produto = produtos.find( p => p.id == params.id );
+    
+    return NextResponse.json(produto);
 }
