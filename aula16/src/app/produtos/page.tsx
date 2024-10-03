@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Produtos() {
+export default function CadProdutos() {
 
     const produtos = [
         { id: 1, nome: "mouse", preco: 50, qtd: 100 },
