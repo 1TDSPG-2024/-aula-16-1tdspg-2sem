@@ -8,7 +8,9 @@ const produtos = [
     { id: 3, nome: "teclado", preco: 130, qtd: 40 },
 ];
 
-export async function GET() {
+export async function GET(response:Response, {params}:{params:{id:number}}) {
+    //Criar uma forma de pesquisa na lista para identificar o produto pelo ID:
+    const produto = produtos.find(p => p.id == params.id);
     return NextResponse.json(produtos);
 }
 
