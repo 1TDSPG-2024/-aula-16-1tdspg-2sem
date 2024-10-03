@@ -1,4 +1,11 @@
+"use client";
+
+import { TipoProduto } from "@/types";
+import { useState } from "react";
+
 export default function CadProduto() {
+  const [produto, setProduto] = useState<TipoProduto>();
+
   return (
     <div>
       <h2>Cadastro de Produtos</h2>
@@ -10,7 +17,7 @@ export default function CadProduto() {
               htmlFor="idProduto"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-900"
             >
-              Your email
+              Seu nome
             </label>
             <input
               type="text"
