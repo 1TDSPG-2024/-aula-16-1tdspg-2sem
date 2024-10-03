@@ -1,4 +1,10 @@
+"use client"
+import { useState } from "react";
 export default function CadProduto() {
+
+    const [produto, setProduto] = useState();
+
+
     return (
         <div>
             <h2>Cadastro de Produtos</h2>
