@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
+import { TipoProduto } from "@/types";
 
-type TipoProduto = {
-    id: number;
-    nome: string;
-    preco: number;
-    qtd: number;
-}
+// type TipoProduto = {
+//     id: number;
+//     nome: string;
+//     preco: number;
+//     qtd: number;
+// }
 
 //CRIAR AQUI NESTE LOCAL OU TRAZER PARA CÁ A LISTA DE
 //PRODUTOS E APRESENTAR ELA NO RETORNO DA API...
